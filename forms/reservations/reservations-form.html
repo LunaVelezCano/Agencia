@@ -1,0 +1,59 @@
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Reservaciones</title>
+    <link rel="stylesheet" href="styleReservation.css">
+</head>
+<body>
+    <header>
+        <h1>Realice su Reservación</h1>
+    </header>
+    <div class="container">
+        <ul>
+            <a href="/index.html">inicio</a>
+        </ul>
+        <form id="reservations-form">
+            
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="cedula">Cédula:</label>
+            <input type="text" id="cedula" name="cedula" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+
+            <label for="numAdultos">Número de Adultos:</label>
+            <input type="number" id="numAdultos" name="numAdultos" min="1" required>
+
+            <label for="numNinos">Número de Niños:</label>
+            <input type="number" id="numNinos" name="numNinos" min="0" required>
+
+            <label for="date">Fecha de Llegada:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="solicitud">Solicitud Especial:</label>
+            <textarea id="solicitud" name="solicitud" rows="4"></textarea>
+
+            <label for="reservaValue">Valor de la reservación:</label>
+            <span id="reservaValue"></span>
+
+            <button type="button" onclick="generarValorReserva()">Generar Valor de la reserva</button>
+            <button type="button" onclick="confirmarReservacion()">Confirmar Reservación</button>
+            <button type="button" onclick="cancelarReservacion()">Cancelar</button>
+        </form>
+        <div>
+            <footer>
+                <p>&copy; 2023 Agencia de Viajes</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="reservation.js"></script>
+</body>
+</html>

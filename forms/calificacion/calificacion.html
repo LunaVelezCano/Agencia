@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Calificación</title>
+    <link rel="stylesheet" href="styleCalificacion.css">
+</head>
+
+<body>
+   <div>
+
+        <h1>Le agradecemos su Calificación</h1>
+    
+   
+    <div class="container">
+        <ul>
+        <a href="/index.html">inicio</a>
+    </ul>
+        <form id="calificacion-form">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="vuelo">¿Cómo calificarías el vuelo? (1-5):</label>
+            <input type="number" id="vuelo" name="vuelo" min="1" max="5" required>
+
+            <label for="hospedaje">¿Cómo calificarías el hospedaje? (1-5):</label>
+            <input type="number" id="hospedaje" name="hospedaje" min="1" max="5" required>
+
+            <label for="servicios">¿Cómo calificarías nuestros servicios? (1-5):</label>
+            <input type="number" id="servicios" name="servicios" min="1" max="5" required>
+
+            <button type="button" onclick="enviarCalificacion()">Enviar Calificación</button>
+        </form>
+        <div>
+            <footer>
+                <p>&copy; 2023 Agencia de Viajes</p>
+            </footer>
+        </div>
+    </div>
+</div>
+    <script src="calificacion.js"></script>
+</body>
+</html>

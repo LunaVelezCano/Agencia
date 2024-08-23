@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Tickets</title>
+    <link rel="stylesheet" href="styleTickets.css">
+</head>
+<body>
+    <header>
+    <h1>Realice la compra de su ticket</h1>
+</header>
+    <div class="container">
+        <ul>
+            <a href="/index.html">inicio</a>
+        </ul>
+        <form id="tickets-form">
+            <label for="destination">Destino:</label>
+            <input type="text" id="destination" name="destination" required>
+
+            <label for="numTickets">Cantidad de Tickets:</label>
+            <input type="number" id="numTickets" name="numTickets" min="1" required>
+
+            <label for="ticketValue">Valor del Ticket:</label>
+            <span id="ticketValue"></span>
+
+            <label for="date">Fecha de Tickets:</label>
+            <input type="date" id="date" name="date" required>
+            <button type="button" onclick="generarValorTicket()">Generar Valor del Ticket</button>
+            <button type="button" onclick="confirmarCompra()">Confirmar Compra</button>
+            <button type="button" onclick="cancelarCompra()">Cancelar Compra</button>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2023 Agencia de Viajes</p>
+    </footer>
+</div>
+    <div>
+      
+    <script src="tickets.js"></script>
+</body>
+</html>
